@@ -1,0 +1,42 @@
+            // Integers
+
+//SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract local{
+    // int8 count = 128; this is wrong
+    int16 count = 128; //this is wright 
+    
+    // uint8 count = 256; this is wrong 
+    //  uint16 count = 256; 
+    // uint count = -1; this is also wrong
+    
+}
+
+
+// notes for integers----
+
+//integers are two types 
+// 1.int--->i. int have both positive and negative value.            
+//          ii. signed integers be of various types.                   
+//          iv. int alias to int256
+//          v. by defoult an int is initilized to 0.
+//          vi. overflow get detected at compile time.
+//          vii. range-
+//                    1.int8: -128 to +127
+//                    2. int16 -32768 to +32767
+//                    3. -2^(n-1) to 2^(n-1)-1
+
+
+
+// 1.uint--->i. no negative value. 
+//          ii. unsigned integers be of various types.
+//          iii. uint8 to uint256 
+//          iv. uint alias to uint256
+//          v. by defoult an uint is initilized to 0.
+//          vi. overflow get detected at compile time.
+//          vii. range-
+//                    1.uint8: 0 to +127
+//                    2. int16: 0 to 65535
+//                    3. 0 to 2^(n)-1

@@ -1,0 +1,25 @@
+                     // LOCAL VARIABLES
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract local
+{
+    //  string memory name = "sam"; ---> This is also wrong besacuse (check the point 4.)
+    function store() pure public returns(uint)
+{
+    //THIS IS CALLED  local VARIABLES
+    // string name ="sam"; ---> this is wrong to direct use in function Thats why we have to put memory in this .to sore this in memory
+    string memory name = "sam";  //this is correct..
+    uint age = 10;
+    return age;
+}    
+}
+
+
+// some important points of local VARIABLES-
+// 1. declared inside function and are kept on the stack,not on storage . 
+// 2. Don't cost gas .
+// 3. Ther are some types that reference the storage by default.
+// 4. Memory Keyword can't be used at contract level.

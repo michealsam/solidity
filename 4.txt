@@ -1,0 +1,35 @@
+        // view or pure variable 
+
+
+//SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract local{
+    uint public age=10;
+    
+    //  function getter() public pure returns(uint)  ]
+    // {                                             ]--->this is wrong  pure can't be used here
+    //   return age;                                 ] 
+    // }
+    
+    function getter() public pure returns(uint)
+    {
+        uint roll = 100;
+        return roll;
+    }
+    
+    // function getter() public view returns(uint)  ]
+    // {                                            ] --->view and pure can used here      
+    //     uint roll = 100;                         ]
+    //     return roll;
+    // }
+    
+}
+
+
+// some important points-
+// 1.view and pure both cannot be used for modification .
+// 2.view can be used for read as well as write.
+// 3.pure can be used only for write.
+// 4. If we dont use modification then we have to use view or pure other wise it gives us error.

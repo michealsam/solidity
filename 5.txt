@@ -1,0 +1,21 @@
+           // constructor
+
+//SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract local{
+    
+    uint public count;
+    
+    constructor(uint new_count) //arguments
+    {
+        count=new_count;
+    }
+}
+
+
+// some important points 
+// 1. EXecuted only once.
+// 2. You create only one constructur and this is optional.
+// 3. A defoult constructor is created by the compiler if there is no explicity define constructor.
